@@ -1,0 +1,74 @@
+<p><b>Dựng xong sân khấu trong SketchUp rồi, giờ lại mở Photoshop vẽ lại pixel map, ngồi tính từng màn bao nhiêu pixel, rồi chia slice cho Resolume bằng tay?</b> Không cần nữa. <b>SuDeMa Stage Workflow</b> là bộ phần mềm do HTTP Sound &amp; Lighting phát triển, gồm <b>plugin SketchUp</b> và app <b>SuDeMa LED Mapper</b>. Từ mô hình 3D, bạn có ngay pixel map, sơ đồ đi dây cabin, preset Resolume và file patch cho Depence, grandMA2 trong vài phút.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/01-tong-quan.jpg" alt="Giao diện SuDeMa LED Mapper"></p><p><em>Pixel map 9 màn LED lấy thẳng từ mô hình SketchUp</em></p>
+<h2>Tính năng nổi bật</h2>
+<ul>
+<li><b>Lấy màn LED từ SketchUp:</b> đánh dấu group là màn LED (phẳng, cong, viền decor tròn), plugin tự đo kích thước thật. Nhập module (mm) và số px, app tính ngay độ phân giải và pitch.</li>
+<li><b>Pixel map kéo thả:</b> tự bắt dính mép, chọn nhiều màn, nhân đôi, copy / dán, căn chỉnh, tạo mảng màn giống nhau.</li>
+<li><b>Lưu mapping:</b> dán ảnh pixel map lên đúng mặt LED trong SketchUp, kể cả màn cong và viền tròn, đúng chiều cả khi màn lắp xoay.</li>
+<li><b>Màn hình dạng bất kỳ:</b> tắt từng module để làm màn bậc thang, tam giác, khuyết góc. Xoay màn 90° / 180° / 270°.</li>
+<li><b>Sơ đồ đi dây cabin &amp; cổng bộ xử lý:</b> tự chia cabin vào cổng NovaStar / Colorlight theo tải (650.000 px/cổng 1G…). Đi dây zíc-zắc theo cột hoặc hàng. Xuất PNG và bảng cổng Excel cho tổ kỹ thuật LED.</li>
+<li><b>Resolume Arena:</b> xuất preset Advanced Output, tự chia canvas thành nhiều output 4K, mỗi màn một slice.</li>
+<li><b>Depence:</b> xuất mặt LED đã dán ảnh (.skp / .dae) và file <b>MVR</b> chứa đèn đã patch (Fixture ID, DMX, vị trí 3D).</li>
+<li><b>grandMA2:</b> xuất <b>layer XML import thẳng vào MA2</b> (Fixture ID, địa chỉ DMX, vị trí 3D cho MA 3D), kèm bảng patch CSV.</li>
+<li><b>Đồng bộ app ↔ SketchUp:</b> làm pixel map trên màn hình thứ hai. Bấm Lưu mapping là mô hình SketchUp tự cập nhật.</li>
+<li>Giao diện <b>100% tiếng Việt</b>, có hướng dẫn chi tiết (F1), tour nhanh, <b>tự cập nhật</b> phiên bản mới.</li>
+</ul>
+<h2>Tải phần mềm</h2>
+<p><a href="https://github.com/phongnamtk10-lgtm/HTTPsudema/releases/latest">👉 TẢI SuDeMa Stage Workflow (bản mới nhất)</a></p>
+<ul>
+<li>Hệ điều hành: <b>Windows 10 / 11 (64-bit)</b>. Plugin hỗ trợ <b>SketchUp 2017 – 2026</b>.</li>
+<li>Một bộ cài (~47 MB) cài cả app LED Mapper lẫn plugin SketchUp.</li>
+<li>Có <b>7 ngày dùng thử miễn phí</b>. Muốn dùng lâu dài thì liên hệ HTTP để nhận mã kích hoạt (xem cuối bài).</li>
+</ul>
+<h2>Cài đặt</h2>
+<ol>
+<li>Tải file <b>SuDeMa-Stage-Setup-….exe</b> ở nút trên, bấm đúp để chạy.</li>
+<li>Nếu Windows hiện màn hình xanh “Windows protected your PC”: bấm <b>More info</b> → <b>Run anyway</b>. (Phần mềm chưa có chữ ký số nên Windows hỏi lại — đây là bình thường.)</li>
+<li>Windows hỏi quyền → <b>Yes</b>. Để tích <b>Cài plugin cho các bản SketchUp có trên máy</b>. Bộ cài tự tìm SketchUp 2017 – 2026.</li>
+<li>Mở lại SketchUp. Nếu SketchUp hỏi có nạp extension không, chọn <b>Load / Always load</b>. Toolbar <b>SuDeMa Stage Workflow</b> sẽ xuất hiện.</li>
+</ol>
+<h2>Bắt đầu nhanh trong 4 bước</h2>
+<h3>1. Đánh dấu màn LED trong SketchUp</h3>
+<p>Mỗi màn là một group, quay mặt về phía khán giả (hướng nhìn Front). Chọn màn → toolbar <b>Đánh dấu màn LED</b> → chọn loại (Phẳng / Cong / Viền tròn), nhập module, ví dụ <code>250 mm · 64 px</code> = P3.91. Chọn nhiều màn cùng lúc thì tên tự đánh số.</p>
+<h3>2. Mở LED Mapper và xếp pixel map</h3>
+<p>Bấm <b>LED Mapper</b> (mở ngay trong SketchUp) hoặc <b>Gửi sang app LED Mapper</b> (mở app riêng, tiện cho màn hình thứ hai). Các màn đã được xếp sẵn theo mặt đứng sân khấu. Kéo thả để chỉnh, thanh dưới cho biết FULL LED, tổng pixel, số cổng và số output.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/04-chon-nhieu.jpg" alt="Chọn nhiều màn và căn chỉnh"></p><p><em>Chọn nhiều màn để sửa hàng loạt, căn chỉnh, nhân đôi</em></p>
+<h3>3. Lưu mapping</h3>
+<p>Bấm nút đỏ <b>Lưu mapping</b>: ảnh pixel map được dán lên đúng từng mặt LED trong mô hình. Bố cục lưu luôn trong file .skp, lần sau mở lại vẫn còn.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/08-sketchup.jpg" alt="Mapping dán lên mô hình SketchUp"></p><p><em>Ảnh dán liền mạch trên màn phẳng, màn cong, viền tròn và màn sàn</em></p>
+<h3>4. Xuất file cho từng phần mềm</h3>
+<ul><li><b>Resolume Arena:</b> XML preset Advanced Output (nhiều output) + PNG pixel map làm guide</li><li><b>Depence:</b> Mặt LED đã dán ảnh (.skp / .dae) + MVR đèn đã patch</li><li><b>grandMA2:</b> Layer XML import thẳng (Fixture ID, DMX, vị trí 3D) + CSV</li><li><b>Tổ kỹ thuật LED:</b> PNG sơ đồ đi dây + bảng cổng bộ xử lý (Excel)</li></ul>
+<h2>Sơ đồ đi dây cabin và cổng bộ xử lý</h2>
+<p>Chọn <b>Lưới → Đi dây (cổng)</b>. App chia cabin của từng màn vào các cổng mạng theo tải tối đa mỗi cổng (650.000 px cho cổng 1G, 525.000 cho 10-bit, 1.300.000 cho 2G, hoặc tự nhập). Mỗi cổng một màu, có đường dây zíc-zắc và mã cổng <code>P2·3</code> = bộ xử lý 2, cổng 3. Mỗi màn chọn được góc bắt đầu, đi theo cột hay hàng. Xuất <b>PNG sơ đồ đi dây</b> và <b>bảng cổng CSV</b> (tải %, số cabin từng cổng) gửi thẳng cho anh em LED.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/02-di-day.jpg" alt="Sơ đồ đi dây cabin"></p><p><em>Sơ đồ đi dây: mỗi cổng một màu, chấm trắng là cabin đầu tiên của cổng</em></p>
+<h2>Nhiều output cho Resolume, xem trước nội dung</h2>
+<p>Canvas lớn hơn 4K? App tự chia thành nhiều output (mặc định 3840×2160), đường chia hiện ngay trên canvas. Preset XML tạo mỗi output một Screen, màn nằm vắt qua ranh giới được tách thành hai slice. Gắn một ảnh nội dung phủ toàn canvas để xem trước hình chạy qua các màn giống Resolume.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/03-noi-dung-output.jpg" alt="Xem trước nội dung và output"></p><p><em>Xem trước nội dung trên pixel map, 9 output 3840×2160</em></p>
+<h2>Màn hình dạng bất kỳ, màn lắp xoay</h2>
+<p>Nút <b>Tắt module</b>: bấm hoặc kéo trên màn để bỏ module, làm màn bậc thang, tam giác, khuyết góc. Diện tích, pixel, số cabin và tải cổng tự trừ. Màn lắp dọc hoặc ngược thì chọn <b>Xoay 90° / 180° / 270°</b>; khi Lưu mapping, ảnh dán lên SketchUp đúng chiều.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/05-hinh-dang.jpg" alt="Tắt module, xoay màn"></p><p><em>CENTER thành hình bậc thang, R4 xoay 90°</em></p>
+<h2>Patch đèn: Depence &amp; grandMA2</h2>
+<p>Trong SketchUp chọn các đèn → <b>Patch fixture</b>: nhập Fixture ID, universe, địa chỉ, số kênh. Địa chỉ tự tăng và tự sang universe mới, có cảnh báo trùng ID / chồng kênh. Sau đó:</p>
+<ul>
+<li><b>Xuất MVR</b> → import vào Depence: đèn có sẵn vị trí, hướng, ID, địa chỉ (đóng gói kèm file GDTF nếu có).</li>
+<li><b>Xuất layer grandMA2</b> → file nằm sẵn trong thư mục MA2 onPC. Gõ <code>cd EditSetup ; cd Layers ; Import "tên" At 1 ; cd /</code> là có patch và vị trí 3D trong MA 3D.</li>
+</ul>
+<h2>Giao diện tiếng Việt, hướng dẫn ngay trong app</h2>
+<p>Nút <b>? Hướng dẫn</b> (F1) mở 16 chương hướng dẫn chi tiết, in hoặc lưu PDF được. Có <b>Tour nhanh</b> giới thiệu từng vùng màn hình. Kéo vạch chia để đổi độ rộng các vùng, menu <b>Bố cục</b> để đổi bên hoặc ẩn bớt, phím <b>Tab</b> để chỉ còn canvas.</p>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/06-huong-dan.jpg" alt="Hướng dẫn trong app"></p><p><em>Hướng dẫn chi tiết ngay trong app</em></p>
+<h2>Dùng thử và kích hoạt</h2>
+<p>Cài xong là dùng thử được 7 ngày, đủ mọi tính năng. Hết hạn, app vẫn mở, xem và xếp bố cục được; chỉ khoá phần xuất file và Lưu mapping. Một mã kích hoạt dùng chung cho cả app và plugin SketchUp trên máy đó.</p>
+<ol>
+<li>Bấm nút <b>Bản quyền</b> trên thanh trên của app (hoặc Extensions → SuDeMa → Bản quyền… trong SketchUp) → <b>Sao chép</b> mã máy.</li>
+<li>Gửi mã máy cho HTTP Sound &amp; Lighting qua Facebook.</li>
+<li>Dán mã kích hoạt nhận được (bắt đầu bằng <code>SDM1-</code>) → <b>Kích hoạt</b>.</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/phongnamtk10-lgtm/HTTPsudema/main/blog/sudema-led-mapper/07-ban-quyen.jpg" alt="Bản quyền"></p><p><em>Mã máy và ô nhập mã kích hoạt</em></p>
+<p>💡 App tự kiểm tra phiên bản mới. Khi có bản mới, nút <b>⬆ Có bản …</b> hiện lên: bấm Tải về → Cài &amp; khởi động lại, không cần tải lại từ web. App không bao giờ tự cài giữa show.</p>
+<h2>Liên hệ</h2>
+<p>HTTP Sound &amp; Lighting – hỗ trợ cài đặt, nhận mã kích hoạt, góp ý tính năng:</p>
+<ul>
+<li>Facebook: <a href="https://www.facebook.com/httphong94/">facebook.com/httphong94</a></li>
+<li>Hotline: 0975 402 402</li>
+<li>Website: <a href="https://www.hoangphongsoundandlight.com/">hoangphongsoundandlight.com</a></li>
+</ul>
